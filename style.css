@@ -145,23 +145,23 @@ h1 {
 }
 
 /* Smooth Popup Component */
-.popup {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .93);
-    backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+.popup{
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.92);
+    backdrop-filter:blur(6px);
+
+    z-index:999;
 }
 
-.popup.active {
-    opacity: 1;
-    pointer-events: auto;
+.popup.active{
+    display:flex;
 }
 
 .popup-card {

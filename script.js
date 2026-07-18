@@ -1,3 +1,11 @@
+alert("JS Loaded");
+
+const popup = document.getElementById("popup");
+
+document.getElementById("findBtn").onclick = () => {
+    popup.classList.add("active");
+};
+
 const popup = document.getElementById("popup");
 
 document.getElementById("findBtn").onclick = () => {
@@ -8,7 +16,6 @@ function closePopup(){
     popup.classList.remove("active");
 }
 
-// Fungsi Salin Contract Address (CA)
 function copyCA(){
     const ca = document.getElementById("ca").innerText;
     navigator.clipboard.writeText(ca);
