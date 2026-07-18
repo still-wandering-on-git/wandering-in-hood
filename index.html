@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wandering in Hood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="grid"></div>
+
+    <div class="container">
+        <img src="assets/raccoon.png" class="logo" alt="Raccoon Logo">
+        <h1>Wandering in Hood</h1>
+        <p class="subtitle">still wandering.</p>
+
+        <button id="findBtn">Find Home</button>
+
+        <div class="contract">
+            <div class="label">Contract</div>
+            <div class="ca-box">
+                <span id="ca">0xComingSoon</span>
+                <button class="copy-btn" onclick="copyCA()">COPY</button>
+            </div>
+        </div>
+
+        <p class="footer">No roadmap • We're literally lost 🦝</p>
+    </div>
+
+    <!-- Popup Section -->
+    <div id="popup" class="popup">
+        <div class="popup-card">
+            <h2>404</h2>
+            <p>
+                GPS disconnected.<br><br>
+                Current location:<br>
+                <b>Another L2.</b><br><br>
+                Home not found.
+            </p>
+            <button onclick="closePopup()">keep wandering</button>
+        </div>
+    </div>
+
+</body>
+</html>

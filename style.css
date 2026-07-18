@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Background Cyber Grid */
+.grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(127, 255, 0, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(127, 255, 0, .08) 1px, transparent 1px);
+    background-size: 64px 64px;
+    pointer-events: none;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, #57ff0015 0%, transparent 70%);
+}
+
+/* Main Content Container */
+.container {
+    position: relative;
+    min-height: auto;
+    z-index: 2;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    box-shadow: 
+        0 0 25px #7fff00,
+        0 0 70px rgba(127, 255, 0, .35);
+    transition: .3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-shadow: 0 0 25px rgba(127, 255, 0, .25);
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #8cff00;
+    margin-bottom: 45px;
+}
+
+#findBtn {
+    background: #8cff00;
+    color: black;
+    border: none;
+    padding: 18px 55px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .25s;
+    box-shadow:
+        0 0 20px #7fff00,
+        0 0 45px rgba(127, 255, 0, .35);
+}
+
+#findBtn:hover {
+    transform: translateY(-3px);
+}
+
+/* Contract Address Section */
+.contract {
+    margin-top: 50px;
+}
+
+.label {
+    color: #8cff00;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.ca-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #111;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid #274d00;
+    max-width: 460px;
+    margin: auto;
+}
+
+#ca {
+    flex: 1;
+    text-align: left;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #8cff00;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.footer {
+    margin-top: 45px;
+    opacity: .45;
+}
+
+/* Smooth Popup Component */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .93);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.popup.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-card {
+    background: #111;
+    padding: 45px;
+    border-radius: 25px;
+    border: 1px solid #264d00;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(127, 255, 0, .15);
+}
+
+.popup h2 {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: #8cff00;
+}
+
+.popup p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.popup button {
+    background: #8cff00;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width:700px){
+    .logo { width: 140px; }
+    h1 { font-size: 44px; }
+    .subtitle { font-size: 20px; }
+    #findBtn { width: 100%; }
+    .ca-box { flex-direction: column; }
+    #ca { text-align: center; padding: 0; }
+    .copy-btn { width: 100%; }
+}
