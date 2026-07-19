@@ -54,6 +54,7 @@
 
                 <span id="ca">
                     0xc37d66458c9ddeabad4976f077e98b176cb211c0
+                </span>
 
                 <button
                     class="copy-btn"
@@ -82,7 +83,7 @@
             </a>
 
             <a
-                href="https://dexscreener.com/"
+                href="https://dexscreener.com/robinhood/0x851ae649fcf8ebf4eba4d630d77dce7e1a33e43d"
                 target="_blank"
                 class="social-btn">
 
@@ -160,30 +161,6 @@
 
     <script src="script.js"></script>
 
-    <script>
-        // Firefly Generator
-        function createFireflies() {
-            const container = document.getElementById('fireflies');
-            for (let i = 0; i < 35; i++) {
-                const fly = document.createElement('div');
-                fly.className = 'firefly';
-                
-                const left = Math.random() * 100;
-                const duration = 6 + Math.random() * 12;
-                const delay = Math.random() * -15;
-                
-                fly.style.left = `${left}vw`;
-                fly.style.top = `${Math.random() * 100}vh`;
-                fly.style.animationDuration = `${duration}s`;
-                fly.style.animationDelay = `${delay}s`;
-                fly.style.setProperty('--x', `${(Math.random() - 0.5) * 800}px`);
-                fly.style.setProperty('--y', `${(Math.random() - 0.5) * 600}px`);
-                
-                container.appendChild(fly);
-            }
-        }
-
-        window.onload = createFireflies;
-    </script>
 </body>
+
 </html>
