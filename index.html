@@ -1,51 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Wandering in Hood</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+    <!-- Background -->
     <div class="grid"></div>
 
-    <div class="container">
-        <img src="assets/raccoon.png" class="logo" alt="Raccoon Logo">
+    <div class="glow"></div>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Logo -->
+        <img
+            src="assets/raccoon.png"
+            alt="Wandering in Hood"
+            class="logo">
+
+        <!-- Title -->
         <h1>Wandering in Hood</h1>
-        <p class="subtitle">still wandering</p>
 
-        <button id="findBtn">Find Home</button>
+        <p class="subtitle">
+            still wandering
+        </p>
 
-        <div class="contract">
-            <div class="label">Contract</div>
-            <div class="ca-box">
-                <span id="ca">0xComingSoon</span>
-                <button class="copy-btn" onclick="copyCA()">COPY</button>
+        <!-- CTA -->
+        <button id="findBtn">
+            Find Home
+        </button>
+
+        <!-- Contract -->
+        <section class="contract">
+
+            <div class="label">
+                Contract
             </div>
-        </div>
 
-        <p class="footer">No roadmap • We're literally lost 🦝</p>
-    </div>
+            <div class="ca-box">
 
-    <!-- Popup Section -->
-    <div id="popup" class="popup">
-        <div class="popup-card">
-            <h2>404</h2>
-            <p>
-                GPS disconnected.<br><br>
-                Current location:<br>
-                <b>Another L2.</b><br><br>
-                Home not found.
+                <span id="ca">
+                    0xComingSoon
+                </span>
+
+                <button
+                    class="copy-btn"
+                    onclick="copyCA()">
+
+                    COPY
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Social -->
+        <section class="socials">
+
+            <a
+                href="https://x.com/WanderinH00d"
+                target="_blank"
+                class="social-btn">
+
+                <span class="icon">𝕏</span>
+
+                <span>Twitter</span>
+
+            </a>
+
+            <a
+                href="https://dexscreener.com/"
+                target="_blank"
+                class="social-btn">
+
+                <span class="icon">📈</span>
+
+                <span>DexScreener</span>
+
+            </a>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p class="footer">
+
+                No roadmap.<br>
+
+                We're literally lost.
+
             </p>
-            <button onclick="closePopup()">keep wandering</button>
+
+        </footer>
+
+    </main>
+
+    <!-- Popup -->
+
+    <div id="popup" class="popup">
+
+        <div class="popup-card">
+
+            <div class="popup-icon">
+
+                🧭
+
+            </div>
+
+            <h2>
+
+                404
+
+            </h2>
+
+            <p>
+
+                GPS disconnected.
+
+                <br><br>
+
+                Current location:
+
+                <br>
+
+                <strong>Another L2.</strong>
+
+                <br><br>
+
+                Home not found.
+
+            </p>
+
+            <button
+                class="popup-btn"
+                onclick="closePopup()">
+
+                Keep Wandering
+
+            </button>
+
         </div>
+
     </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
