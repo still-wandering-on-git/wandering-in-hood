@@ -50,10 +50,6 @@
         <!-- Contract -->
         <section class="contract">
 
-            <div class="label">
-                Contract
-            </div>
-
             <div class="ca-box">
 
                 <span id="ca">
@@ -165,6 +161,30 @@
 
     <script src="script.js"></script>
 
-</body>
+    <script>
+        // Firefly Generator
+        function createFireflies() {
+            const container = document.getElementById('fireflies');
+            for (let i = 0; i < 35; i++) {
+                const fly = document.createElement('div');
+                fly.className = 'firefly';
+                
+                const left = Math.random() * 100;
+                const duration = 6 + Math.random() * 12;
+                const delay = Math.random() * -15;
+                
+                fly.style.left = `${left}vw`;
+                fly.style.top = `${Math.random() * 100}vh`;
+                fly.style.animationDuration = `${duration}s`;
+                fly.style.animationDelay = `${delay}s`;
+                fly.style.setProperty('--x', `${(Math.random() - 0.5) * 800}px`);
+                fly.style.setProperty('--y', `${(Math.random() - 0.5) * 600}px`);
+                
+                container.appendChild(fly);
+            }
+        }
 
+        window.onload = createFireflies;
+    </script>
+</body>
 </html>
