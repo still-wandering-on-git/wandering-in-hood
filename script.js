@@ -12,15 +12,22 @@ function closePopup(){
 }
 
 function copyCA(){
+
     const ca=document.getElementById("ca").innerText;
 
     navigator.clipboard.writeText(ca);
 
     const btn=document.querySelector(".copy-btn");
 
-    btn.innerHTML="COPIED";
+    btn.innerHTML="✓ COPIED";
+
+    btn.disabled=true;
 
     setTimeout(()=>{
+
         btn.innerHTML="COPY";
-    },1500);
+        btn.disabled=false;
+
+    },1800);
+
 }

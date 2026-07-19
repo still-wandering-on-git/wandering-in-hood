@@ -146,22 +146,29 @@ h1 {
 
 /* Smooth Popup Component */
 .popup{
-    position:fixed;
-    inset:0;
 
     display:none;
 
+    position:fixed;
+
+    inset:0;
+
     justify-content:center;
+
     align-items:center;
 
-    background:rgba(0,0,0,.92);
+    background:rgba(0,0,0,.88);
+
     backdrop-filter:blur(6px);
 
-    z-index:999;
+    z-index:9999;
+
 }
 
 .popup.active{
+
     display:flex;
+
 }
 
 .popup-card {
@@ -194,12 +201,13 @@ h1 {
     cursor: pointer;
 }
 
-@media(max-width:700px){
-    .logo { width: 140px; }
-    h1 { font-size: 44px; }
-    .subtitle { font-size: 20px; }
-    #findBtn { width: 100%; }
-    .ca-box { flex-direction: column; }
-    #ca { text-align: center; padding: 0; }
-    .copy-btn { width: 100%; }
+@media (max-width:700px){
+
+    .logo{
+
+        width:140px;
+        aspect-ratio:1/1;
+
+    }
+
 }
